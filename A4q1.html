@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Calculator
+    </title>
+    <style>
+        #mainbox {
+            background-color: rgb(23, 23, 29);
+            display: block;
+            align-items: center;
+            justify-content: center;
+            border: 2px;
+            border-color: cadetblue;
+            height: 500px;
+            width: 75%;
+        }
+
+        .innerboxes {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            color: whitesmoke;
+            height: 50px;
+            width: 200px;
+            align-items: left;
+            justify-content: left;
+            font-weight: 300;
+
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        body {
+            color: aliceblue;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-block: 10px;
+            border: 1px;
+            border-color: aliceblue;
+            width: 75%;
+            height: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: medium;
+            margin: 10px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: dimgray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            color: azure;
+
+        }
+
+        #resultbox button {
+            font-size: large;
+            display: flex;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 5px;
+            background-color: darkcyan;
+            height: 3%;
+            width: 90px;
+            align-content: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <center>
+            <div id="mainbox">
+                <h1>CALCULATOR</h1>
+                <br>
+                <br>
+                <div id="innerboxes">
+                    <table>
+                    <tr>
+                        <td>
+                            First Number :
+                        </td>
+                        <td> <input type="number" id="first" style="height:20px; width:200px"></td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            
+                            Second Number :
+                        </td>
+                        <td><input type="number" id="second" style="height:20px; width:200px"></td>
+                    </tr>
+                    <br>
+                    <br>
+                </table>
+
+                    
+                        <div id=buttons>
+                            <button class="btn" id="sum" onclick="sum()">Addition</button>
+                            <button class="btn" id="substract" onclick="substract()">Substraction</button>
+                            <button class="btn" id="multiply " onclick="multiply()"> Multiply</button>
+                            <button class="btn" id="divide" onclick=" division()">Divide</button>
+                        </div>
+                    
+                
+                    <br>
+                    <div id=resultbox>
+                        <button id="result"> RESULT</button>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                function sum() {
+                    var ref_first = document.getElementById("first").value;
+                    ref_first = parseInt(ref_first);
+                    var ref_second = document.getElementById("second").value;
+                    ref_second = parseInt(ref_second);
+                    console.log(ref_first + ref_second);
+                    document.getElementById("result").innerText = ref_first + ref_second;
+                }
+                function substract() {
+                    var ref_first = document.getElementById("first").value;
+                    ref_first = parseInt(ref_first);
+                    var ref_second = document.getElementById("second").value;
+                    ref_second = parseInt(ref_second);
+                    document.getElementById("result").innerText = ref_first - ref_second;
+                }
+
+                function multiply() {
+                    var ref_first = document.getElementById("first").value;
+                    ref_first = parseInt(ref_first);
+                    var ref_second = document.getElementById("second").value;
+                    ref_second = parseInt(ref_second);
+                    document.getElementById("result").innerText = ref_first * ref_second;
+                }
+
+                function division() {
+                    var ref_first = document.getElementById("first").value;
+                    ref_first = parseInt(ref_first);
+                    var ref_second = document.getElementById("second").value;
+                    ref_second = parseInt(ref_second);
+                    document.getElementById("result").innerText = ref_first / ref_second;
+                }
+            </script>
+        </center>
+    </section>
+</body>
+
+</html>
